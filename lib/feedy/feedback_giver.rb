@@ -8,7 +8,7 @@ module Feedy
     def feedback_giver
 
       class_eval do
-        has_many :feedbacks, as: :feedback_giver, class_name: "Feedy::Feedback", dependent: :destroy
+        has_many :feedbacks, as: :author, class_name: "Feedy::Feedback", dependent: :destroy
 
         def self.feedback_giver?
           true

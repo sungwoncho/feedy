@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150205061811) do
+ActiveRecord::Schema.define(version: 20150205092105) do
+
+  create_table "feedy_feedbacks", force: :cascade do |t|
+    t.integer  "author_id"
+    t.string   "author_type"
+    t.text     "subject"
+    t.text     "body"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "feedy_feedbacks", ["author_type", "author_id"], name: "index_feedy_feedbacks_on_author_type_and_author_id"
 
   create_table "non_users", force: :cascade do |t|
     t.string   "name"

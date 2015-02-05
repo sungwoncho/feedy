@@ -12,5 +12,9 @@ describe Feedy do
     context 'for feedback givers' do
       specify { expect(User).to be_feedback_giver }
     end
+
+    context 'for non feedback givers' do
+      specify { expect(NonUser).not_to be_feedback_giver }
+    end
   end
 end
