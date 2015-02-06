@@ -8,7 +8,7 @@ require 'rdoc/task'
 
 RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'FeedyEngine'
+  rdoc.title    = 'Feedy'
   rdoc.options << '--line-numbers'
   rdoc.rdoc_files.include('README.rdoc')
   rdoc.rdoc_files.include('lib/**/*.rb')
@@ -23,4 +23,3 @@ load 'rails/tasks/statistics.rake'
 
 
 Bundler::GemHelper.install_tasks
-

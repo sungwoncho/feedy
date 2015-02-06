@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.version     = Feedy::VERSION
   s.authors     = ["Sung Won Cho"]
   s.email       = ["mikeswcho@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "feedy"
+  s.homepage    = "git@github.com:sungwoncho/feedy.git"
+  s.summary     = "Feedy lets you collect and view user feedback with ease."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
@@ -18,8 +18,9 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.2.0"
 
   s.add_development_dependency "sqlite3"
-  s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "rspec-rails", "~> 3.0"
   s.add_development_dependency "guard-rspec"
   s.add_development_dependency "generator_spec", "~> 0.9.3"
   s.add_development_dependency "shoulda", '~> 3.5.0'
+  s.add_development_dependency "factory_girl_rails", '~> 4.5.0'
 end

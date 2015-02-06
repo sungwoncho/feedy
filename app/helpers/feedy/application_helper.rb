@@ -1,4 +1,4 @@
-module FeedyEngine
+module Feedy
   module ApplicationHelper
   end
 end
