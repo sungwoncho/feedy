@@ -1,5 +1,6 @@
 require "feedy/engine"
 require "active_support"
+require "jquery-rails"
 
 module Feedy
   extend ActiveSupport::Autoload

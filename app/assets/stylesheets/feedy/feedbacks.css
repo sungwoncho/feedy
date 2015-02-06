@@ -2,3 +2,13 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+
+.feedback-toggle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #FFF;
+  background-color: #567390;
+  cursor: pointer;
+  padding: 15px 35px;
+}
