@@ -17,10 +17,10 @@ Run `bundle install` to install the gem.
 Now run the generator:
 
 ```
-rails generator feedy:install
+rails g feedy:install
 ```
 
-The generator will copy migrations and create an initializer at `config/initializers/feedy.rb`.
+The generator will copy migrations, and create an initializer at `config/initializers/feedy.rb`, and mount the engine in your `config/routes.rb` file.
 
 Run the migration:
 
@@ -28,14 +28,41 @@ Run the migration:
 rake db:migrate
 ```
 
+Now, require CSS and JavaScript assets to your asset pipeline.
+
+*application.css*
+```
+...
+//= require feedy/feedbacks
+```
+
+*application.js*
+```
+...
+*= require jquery
+*= require jquery-ujs
+*= require feedy/feedbacks
+```
+
+Require the JavaScript asset *after* `jquery`, and `jquery-ujs`, as Feedy depends on them.
+
+
 ## Usage
 
 In any of your views where you want to include feedback button, just include the following:
 
-```ruby
+```
 <%= feedback_input %>
 ```
 
-### Contributing
+To view the submitted feedbacks, go to `/feedy/feedbacks` path in your browser.
+
+
+## Configuration
+
+`config/initializers/feedy.rb` holds configuration values. Change them to customize the engine's behavior. Don't forget to restart it after making any changes.
+
+
+## Contributing
 
 Pull requests and issues are welcomed.
