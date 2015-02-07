@@ -5,6 +5,7 @@ module Feedy
 
     let!(:feedback_1) { Feedy::Feedback.create() }
     let!(:feedback_2) { Feedy::Feedback.create() }
+    let(:user) { User.create() }
 
     describe 'GET index' do
 
@@ -31,7 +32,8 @@ module Feedy
 
     describe 'POST create' do
       before(:each) do
-        post :create, format: :js, feedback: attributes_for(:feedback), use_route: :feedy
+        # Simulate signed_in user
+        allow(controller).to receive(:current_user) { user }
       end
 
       it 'creates a feedback' do
@@ -41,7 +43,30 @@ module Feedy
       end
 
       it 'returns 201 status' do
+        post :create, format: :js, feedback: attributes_for(:feedback), use_route: :feedy
         expect(response.status).to eq 201
+      end
+
+      context 'when Feedy.anonymous_feedback is false' do
+        before(:each) do
+          Feedy.anonymous_feedback = false
+          post :create, format: :js, feedback: attributes_for(:feedback), use_route: :feedy
+        end
+
+        it 'sets the current_user as author' do
+          expect(Feedy::Feedback.last.author).to eq user
+        end
+      end
+
+      context 'when Feedy.anonymous_feedback is true' do
+        before(:each) do
+          Feedy.anonymous_feedback = true
+          post :create, format: :js, feedback: attributes_for(:feedback), use_route: :feedy
+        end
+
+        it 'does not set author' do
+          expect(Feedy::Feedback.last.author).to be_nil
+        end
       end
     end
 
@@ -58,6 +83,5 @@ module Feedy
       end
 
     end
-
   end
 end

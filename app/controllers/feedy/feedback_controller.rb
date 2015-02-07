@@ -12,7 +12,11 @@ module Feedy
     end
 
     def create
-      @feedback = Feedback.new(feedback_params)
+      if Feedy.anonymous_feedback
+        @feedback = Feedback.new(feedback_params)
+      else
+        @feedback = current_user.feedbacks.new(feedback_params)
+      end
 
       if @feedback.save
         respond_to do |format|
