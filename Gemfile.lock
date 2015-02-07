@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     feedy (0.0.1)
-      jquery-rails (~> 4.0)
+      jquery-rails
       rails (> 4.0.0)
 
 GEM
