@@ -1,4 +1,4 @@
-# Feedy
+# Feedy [![Build Status](https://travis-ci.org/sungwoncho/feedy.svg?branch=master)](https://travis-ci.org/sungwoncho/feedy)
 
 Feedy is an engine that lets you collect and view user feedback with no hassle.
 
