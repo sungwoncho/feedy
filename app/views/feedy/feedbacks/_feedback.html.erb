@@ -1,0 +1,10 @@
+<tr>
+  <td><%= feedback.id %></td>
+  <td><%= feedback.created_at %></td>
+  <td><%= feedback.author.try :id %></td>
+  <td><%= feedback.subject %></td>
+  <td><%= feedback.body %></td>
+  <td>
+    <%= link_to 'view', feedback %>
+  </td>
+</tr>

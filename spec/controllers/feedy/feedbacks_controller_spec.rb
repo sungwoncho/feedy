@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 module Feedy
-  RSpec.describe FeedbackController, :type => :controller do
+  RSpec.describe FeedbacksController, :type => :controller do
 
     let!(:feedback_1) { Feedy::Feedback.create() }
     let!(:feedback_2) { Feedy::Feedback.create() }
