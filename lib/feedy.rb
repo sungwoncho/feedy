@@ -14,7 +14,7 @@ module Feedy
     end
 
     def user_class
-      Object.const_get(@@user_class)
+      Object.const_get(@@user_class) if @@user_class
     end
 
     def current_user_helper
