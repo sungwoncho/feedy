@@ -4,6 +4,7 @@ rescue LoadError
   puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
 end
 
+require 'rspec/core/rake_task'
 require 'rdoc/task'
 
 RDoc::Task.new(:rdoc) do |rdoc|
@@ -17,6 +18,8 @@ end
 APP_RAKEFILE = File.expand_path("../spec/dummy/Rakefile", __FILE__)
 load 'rails/tasks/engine.rake'
 
+desc "Run specs"
+RSpec::Core::RakeTask.new(:spec)
 
 load 'rails/tasks/statistics.rake'
 
