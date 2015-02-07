@@ -60,7 +60,7 @@ To view the submitted feedbacks, go to `/feedy/feedbacks` path in your browser.
 
 ## Configuration
 
-`config/initializers/feedy.rb` holds configuration values. Change them to customize the engine's behavior. Don't forget to restart it after making any changes.
+`config/initializers/feedy.rb` holds configuration values. Change them to customize the engine's behavior. Don't forget to restart your server after making any changes.
 
 
 ## Contributing
