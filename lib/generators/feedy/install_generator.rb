@@ -13,12 +13,10 @@ module Feedy
       source_root File.expand_path("../install/templates", __FILE__)
       desc "Copies Feedy migrations and the initializer"
 
-      def self.next_migration_number(path)
-        Time.now.utc.strftime("%Y%m%d%H%M%S")
-      end
-
       def copy_migration_file
-        migration_template "migration.rb", "db/migrate/create_feedbacks.rb"
+        Dir.chdir(Rails.root) do
+          `rake feedy:install:migrations`
+        end
       end
 
       def determine_user_class

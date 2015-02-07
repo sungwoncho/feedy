@@ -14,12 +14,15 @@ describe Feedy::Generators::InstallGenerator, type: :generator do
     run_generator
   end
 
+  after(:all) do
+    uninstall_migration
+  end
 
   it "copies migration" do
-    expect(destination_root).to have_structure {
+    expect(Rails.root).to have_structure {
       directory "db" do
         directory "migrate" do
-          migration "create_feedbacks"
+          migration "create_feedy_feedbacks.feedy"
         end
       end
     }
@@ -50,5 +53,9 @@ describe Feedy::Generators::InstallGenerator, type: :generator do
 
     FileUtils.mkdir_p(destination)
     FileUtils.cp routes, destination
+  end
+
+  def uninstall_migration
+    FileUtils.rm_rf Dir["#{Rails.root}/db/migrate/*.feedy.rb"]
   end
 end
