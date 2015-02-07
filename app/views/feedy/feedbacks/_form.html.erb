@@ -4,7 +4,7 @@
   </div>
 
   <div class="feedback-input">
-    <%= form_for :feedback, url: feedy.feedback_index_path, html: { id: 'feedback-form' }, remote: true do |f| %>
+    <%= form_for :feedback, url: feedy.feedbacks_path, html: { id: 'feedback-form' }, remote: true do |f| %>
       <%= f.label :subject %>
       <%= f.text_field :subject %>
 
