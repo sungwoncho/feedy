@@ -14,6 +14,7 @@ module Feedy
       desc "Copies Feedy migrations and the initializer"
 
       def copy_migration_file
+        puts "Copying over Feedy migrations..."
         Dir.chdir(Rails.root) do
           `rake feedy:install:migrations`
         end
@@ -32,10 +33,12 @@ module Feedy
       end
 
       def copy_initializer
+        puts "Adding Feedy initializer (config/initializers/feedy.rb)..."
         template 'initializer.rb', 'config/initializers/feedy.rb'
       end
 
       def mount_engine
+        puts "Mounting Feedy engine (config/routes.rb)..."
         route 'mount Feedy::Engine, at: "/feedy"'
       end
     end
