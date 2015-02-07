@@ -31,12 +31,12 @@ module Feedy
 
     describe 'POST create' do
       before(:each) do
-        post :create, feedback: attributes_for(:feedback), use_route: :feedy
+        post :create, format: :js, feedback: attributes_for(:feedback), use_route: :feedy
       end
 
       it 'creates a feedback' do
         expect {
-          post :create, feedback: attributes_for(:feedback), use_route: :feedy
+          post :create, format: :js, feedback: attributes_for(:feedback), use_route: :feedy
         }.to change(Feedy::Feedback, :count).by(1)
       end
 
