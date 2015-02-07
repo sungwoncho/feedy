@@ -3,10 +3,13 @@
   They will automatically be included in application.css.
 */
 
-.feedback-toggle {
+.feedback {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+.feedback-toggle {
   color: #FFF;
   background-color: #567390;
   cursor: pointer;

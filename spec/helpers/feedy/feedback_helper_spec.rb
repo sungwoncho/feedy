@@ -11,9 +11,9 @@ require 'rails_helper'
 #   end
 # end
 module Feedy
-  RSpec.describe FeedbacksHelper, :type => :helper do
+  RSpec.describe FeedbackHelper, :type => :helper do
     describe 'feedback_input' do
-      
+
     end
   end
 end

@@ -1,7 +1,7 @@
 require_dependency "feedy/application_controller"
 
 module Feedy
-  class FeedbacksController < ApplicationController
+  class FeedbackController < ApplicationController
     before_action :set_feedbacks, only: :index
     before_action :set_feedback, only: [:show, :destroy]
 
@@ -15,7 +15,9 @@ module Feedy
       @feedback = Feedback.new(feedback_params)
 
       if @feedback.save
-        head 201
+        respond_to do |format|
+          format.js { head :created }
+        end
       end
     end
 
