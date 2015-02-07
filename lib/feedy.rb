@@ -2,7 +2,7 @@ require "feedy/engine"
 require "active_support"
 
 module Feedy
-  
+
   mattr_accessor :user_class, :current_user_helper, :anonymous_feedback
 
   class << self
@@ -28,5 +28,5 @@ module Feedy
 end
 
 ActiveSupport.on_load(:active_record) do
-  Feedy.extend_user_class!
+  Feedy.extend_user_class! if Feedy.user_class
 end
