@@ -1,7 +1,7 @@
 module Feedy
   module FeedbackHelper
     def feedback_input
-      render 'feedy/feedback/form'
+      render 'feedy/feedbacks/form'
     end
   end
 end
