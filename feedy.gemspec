@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Feedy::VERSION
   s.authors     = ["Sung Won Cho"]
   s.email       = ["mikeswcho@gmail.com"]
-  s.homepage    = "git@github.com:sungwoncho/feedy.git"
+  s.homepage    = "https://github.com/sungwoncho/feedy"
   s.summary     = "Feedy lets you collect and view user feedback with ease."
   s.license     = "MIT"
 
