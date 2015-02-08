@@ -5,12 +5,12 @@
   $('.feedback-input').hide();
 
   $('.feedback-toggle').on('click', function () {
-    $('.feedback-input').toggle();
+    $('.feedback-input').toggle(400);
   });
 
 
   // When the form submission is successful
   $('#feedback-form').on('ajax:success', function (e, data, status, xhr) {
-    $('.feedback-input').html('thanks');
+    $('.feedback-input').html('Thank you. Your feedback was recorded.');
   });
 });
