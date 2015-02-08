@@ -15,7 +15,7 @@ module Feedy
       if Feedy.anonymous_feedback
         @feedback = Feedback.new(feedback_params)
       else
-        @feedback = current_user.feedbacks.new(feedback_params)
+        @feedback = send(Feedy.current_user_helper).feedbacks.new(feedback_params)
       end
 
       if @feedback.save
