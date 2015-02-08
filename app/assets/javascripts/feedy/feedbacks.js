@@ -1,6 +1,6 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
-;$(function () {
+var ready = function () {
   // Hide the input when the page loads.
   $('.feedback-input').hide();
 
@@ -13,4 +13,6 @@
   $('#feedback-form').on('ajax:success', function (e, data, status, xhr) {
     $('.feedback-input').html('Thank you. Your feedback was recorded.');
   });
-});
+};
+
+$(document).on("page:load ready", ready);
