@@ -6,14 +6,16 @@
   <%= javascript_include_tag "feedy/application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class='feedy'>
 
   <%= render 'layouts/feedy/header' %>
 
   <div class="container">
-
-    <%= yield %>
-
+    <div class="row">
+      <div class="col-md-12">
+        <%= yield %>
+      </div>
+    </div>
   </div>
 
 </body>

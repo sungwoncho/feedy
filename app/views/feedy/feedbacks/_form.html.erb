@@ -1,17 +1,19 @@
-<div class="feedback">
-  <div class="feedback-toggle">
-    Feedback
-  </div>
+<div class="feedy">
+  <div class="feedback">
+    <div class="feedback-toggle">
+      Feedback
+    </div>
 
-  <div class="feedback-input">
-    <%= form_for :feedback, url: feedy.feedbacks_path, html: { id: 'feedback-form' }, remote: true do |f| %>
-      <%= f.label :subject %>
-      <%= f.text_field :subject, class: 'form-control' %>
+    <div class="feedback-main">
+      <%= form_for :feedback, url: feedy.feedbacks_path, html: { id: 'feedback-form' }, remote: true do |f| %>
+        <%= f.label :subject %>
+        <%= f.text_field :subject, class: 'feedback-input' %>
 
-      <%= f.label :body, 'Feedback' %>
-      <%= f.text_area :body, rows: 5, class: 'form-control' %>
+        <%= f.label :body, 'Feedback' %>
+        <%= f.text_area :body, rows: 5, class: 'feedback-input' %>
 
-      <%= f.submit 'Submit', class: 'btn btn-primary btn-sm submit-button' %>
-    <% end %>
+        <%= f.submit 'Submit', class: 'submit-button' %>
+      <% end %>
+    </div>
   </div>
 </div>

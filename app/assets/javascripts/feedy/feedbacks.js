@@ -2,16 +2,16 @@
 // All this logic will automatically be available in application.js.
 var ready = function () {
   // Hide the input when the page loads.
-  $('.feedback-input').hide();
+  $('.feedback-main').hide();
 
   $('.feedback-toggle').on('click', function () {
-    $('.feedback-input').toggle(400);
+    $('.feedback-main').toggle(400);
   });
 
 
   // When the form submission is successful
   $('#feedback-form').on('ajax:success', function (e, data, status, xhr) {
-    $('.feedback-input').html('Thank you. Your feedback was recorded.');
+    $('.feedback-main').html('Thank you. Your feedback was recorded.');
   });
 };
 
