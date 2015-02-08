@@ -1,8 +1,7 @@
 PATH
   remote: .
   specs:
-    feedy (0.0.3)
-      jquery-rails
+    feedy (0.0.4)
       rails (~> 4.0)
 
 GEM
@@ -193,6 +192,7 @@ DEPENDENCIES
   feedy!
   generator_spec (~> 0.9.3)
   guard-rspec (~> 4.5.0)
+  jquery-rails
   rspec-rails (~> 3.0)
   shoulda (~> 3.5)
   sqlite3 (~> 1.3)
