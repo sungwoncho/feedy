@@ -1,7 +1,13 @@
-<div>
-  <%= @feedback.subject %>
-</div>
+<h1><%= @feedback.subject %></h1>
 
-<div>
+<p class='text-muted'>
+  Submitted on: <%= @feedback.created_at %>
+</p>
+
+<hr>
+
+<p>
   <%= @feedback.body %>
-</div>
+</p>
+
+<%= link_to 'Back to index', feedbacks_path %>
