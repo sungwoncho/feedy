@@ -25,4 +25,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "generator_spec", "~> 0.9.3"
   s.add_development_dependency "shoulda", "~> 3.5.0"
   s.add_development_dependency "factory_girl_rails", "~> 4.5.0"
+  s.add_development_dependency "jquery-rails"
 end

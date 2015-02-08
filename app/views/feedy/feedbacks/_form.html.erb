@@ -6,12 +6,12 @@
   <div class="feedback-input">
     <%= form_for :feedback, url: feedy.feedbacks_path, html: { id: 'feedback-form' }, remote: true do |f| %>
       <%= f.label :subject %>
-      <%= f.text_field :subject %>
+      <%= f.text_field :subject, class: 'form-control' %>
 
-      <%= f.label :body %>
-      <%= f.text_field :body %>
+      <%= f.label :body, 'Feedback' %>
+      <%= f.text_area :body, rows: 5, class: 'form-control' %>
 
-      <%= f.submit %>
+      <%= f.submit 'Submit', class: 'btn btn-primary btn-sm submit-button' %>
     <% end %>
   </div>
 </div>
