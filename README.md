@@ -4,6 +4,11 @@ Feedy is an engine that lets you collect and view user feedback with no hassle.
 
 Embed feedy in your view, and users will see a feedback button they can toggle in the bottom-right corner of the browser screen.
 
+
+## Working demo
+
+[Demo](https://feedy-demo.herokuapp.com/)
+
 ## Installation
 
 Include Feedy in your Gemfile:
