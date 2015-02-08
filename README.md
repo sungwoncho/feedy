@@ -39,9 +39,9 @@ Now, require CSS and JavaScript assets to your asset pipeline.
 *application.js*
 ```
 ...
- //= require jquery
- //= require jquery-ujs
- //= require feedy/feedbacks
+//= require jquery
+//= require jquery-ujs
+//= require feedy/feedbacks
 ```
 
 Require the JavaScript asset *after* `jquery`, and `jquery-ujs`, as Feedy depends on them.
@@ -52,7 +52,7 @@ Require the JavaScript asset *after* `jquery`, and `jquery-ujs`, as Feedy depend
 In any of your views where you want to include feedback button, just include the following:
 
 ```
-<%= feedback_input %>
+<%= feedy_feedback %>
 ```
 
 To view the submitted feedbacks, go to `/feedy/feedbacks` path in your browser.

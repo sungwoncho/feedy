@@ -12,7 +12,7 @@ require 'rails_helper'
 # end
 module Feedy
   RSpec.describe FeedbackHelper, :type => :helper do
-    describe 'feedback_input' do
+    describe 'feedy_feedback' do
 
     end
   end
