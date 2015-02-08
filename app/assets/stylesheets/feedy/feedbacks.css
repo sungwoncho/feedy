@@ -5,16 +5,16 @@
 
 @import url("//fonts.googleapis.com/css?family=Roboto:400,500");
 
-textarea {
-  resize: none;
-}
-
 .feedy {
   font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #3e3f3a;
   background-color: #ffffff;
+}
+
+.feedy textarea {
+  resize: none;
 }
 
 .feedy .feedback {
